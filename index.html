@@ -1,0 +1,14 @@
+<!doctype html>
+<!-- SGIL · LNRA — página de reenvío para el «QR mediano» (dirección corta).
+     1) Pega abajo, en DESTINO, la URL de la app web (…/exec) de Implementar → Gestionar implementaciones.
+     2) Publica este archivo como index.html (servidor de Ikiam o GitHub Pages).
+     3) En el SGIL, Parámetros del sistema → URL_QR_CORTA = la dirección de esta página terminada en «?»,
+        p. ej. https://lnra.ikiam.edu.ec/q?   o   https://lnra-ikiam.github.io/?
+     El QR lleva  <dirección corta>?I261118-057  y esta página salta a  <DESTINO>?q=I261118-057.  No guarda ni muestra datos. -->
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LNRA · QR</title>
+<script>
+  var DESTINO = 'https://script.google.com/a/macros/ikiam.edu.ec/s/AKfycbwMOidNEqx7Np-DTSMNduxa_HGI0324JMj3wWx3Eqtq0ztUHrKw3FyAeh0KW4pli65j/exec';
+  var cod = (location.search.slice(1) || location.hash.slice(1)).replace(/^q=/, '');
+  if (DESTINO.indexOf('/exec') !== -1) location.replace(DESTINO + (cod ? '?q=' + encodeURIComponent(decodeURIComponent(cod)) : ''));
+</script></head>
+<body style="font-family:Arial,sans-serif;padding:24px">Abriendo la ficha del LNRA…</body></html>
